@@ -8,8 +8,8 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HeaderHome from '@/components/HeaderHome.vue';
-import FeedCategoriesTabBar from "@/components/FeedCategoriesTabBar.vue";
+import HeaderHome from '@/components/home/header/HeaderHome.vue';
+import FeedCategoriesTabBar from "@/components/home/FeedCategoriesTabBar.vue";
 
 @Component({
   components: {

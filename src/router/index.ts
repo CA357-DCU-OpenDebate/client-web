@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
-import DebateFeed from "@/components/DebateFeed.vue";
+import DebateFeed from "@/components/home/DebateFeed.vue";
 
 Vue.use(VueRouter)
 

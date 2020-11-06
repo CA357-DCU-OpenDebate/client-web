@@ -1,6 +1,7 @@
 <template>
   <div class="debate-feed">
     DebateFeed
+    {{$route.params.category}}
   </div>
 </template>
 

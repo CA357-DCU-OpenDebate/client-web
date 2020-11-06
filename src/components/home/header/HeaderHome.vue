@@ -8,8 +8,8 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import TagList from "@/components/TagList.vue";
-import SearchBar from "@/components/SearchBar.vue";
+import TagList from "@/components/home/header/TagList.vue";
+import SearchBar from "@/components/home/header/SearchBar.vue";
 @Component({
   components: {SearchBar, TagList}
 })
