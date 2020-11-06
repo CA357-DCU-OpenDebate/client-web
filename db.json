@@ -1,0 +1,305 @@
+{
+  "projects": [
+    {
+      "id": 3,
+      "creationDate": "10/10/10",
+      "title": "OpenDebate",
+      "ownerId": 393272,
+      "visibility": "PRIVATE",
+      "isOwnerTeam": true,
+      "description": "PROJECT OF A LIFE",
+      "brainflowsId": [332, 423]
+    },
+    {
+      "id": 4,
+      "creationDate": "10/10/10",
+      "title": "Rebirth",
+      "ownerId": 393272,
+      "visibility": "PRIVATE",
+      "isOwnerTeam": true,
+      "description": "Reborn",
+      "brainflowsId": []
+    }
+  ],
+  "brainflows": [
+    {
+      "id": 293693,
+      "creationDate": "10/10/10",
+      "projectId": 3,
+      "title": "brainflow 1",
+      "description": "brainstorm brow",
+      "rootNodesId": [10, 20, 30],
+      "representationMode": "KANBAN"
+    },
+    {
+      "id": 123345,
+      "creationDate": "10/10/10",
+      "projectId": 3,
+      "title": "brainflow 2",
+      "description": "brainstorm brow",
+      "rootNodesId": [100, 200, 300],
+      "representationMode": "KANBAN"
+    },
+    {
+      "id": 2869708,
+      "creationDate": "10/10/10",
+      "projectId": 3,
+      "title": "brainflow 2",
+      "description": "brainstorm brow",
+      "rootNodesId": [1000, 2000, 3000],
+      "representationMode": "KANBAN"
+    }
+  ],
+  "nodes": [
+    {
+      "id": 10,
+      "title": "TODO",
+      "description": "hehe",
+      "parentNodeId": null,
+      "childNodesId": [11, 12],
+      "membersId": [],
+      "tagsId": [],
+      "linksId": [],
+      "attachments": [],
+      "creationDate": "",
+      "orderIndex": 0,
+      "beginDate": null,
+      "endDate": null,
+      "isAcceptingChildren": false,
+      "isOpen": false
+    },
+    {
+      "id": 20,
+      "title": "IN_PROGRESS",
+      "description": "hehe",
+      "parentNodeId": null,
+      "childNodesId": [21, 22],
+      "membersId": [],
+      "tagsId": [],
+      "linksId": [],
+      "attachments": [],
+      "creationDate": "",
+      "orderIndex": 1,
+      "beginDate": null,
+      "endDate": null,
+      "isAcceptingChildren": false,
+      "isOpen": false
+    },
+    {
+      "id": 30,
+      "title": "DONE",
+      "description": "hehe",
+      "parentNodeId": null,
+      "childNodesId": [31, 32],
+      "membersId": [],
+      "tagsId": [],
+      "linksId": [],
+      "attachments": [],
+      "creationDate": "",
+      "orderIndex": 2,
+      "beginDate": null,
+      "endDate": null,
+      "isAcceptingChildren": false,
+      "isOpen": false
+    },
+    {
+      "id": 11,
+      "title": "dqlh",
+      "description": "hehe",
+      "parentNodeId": 10,
+      "childNodesId": [],
+      "membersId": [1, 2, 3],
+      "tagsId": [11, 12, 13, 14, 15, 16],
+      "linksId": [],
+      "attachments": [],
+      "creationDate": "",
+      "orderIndex": 0,
+      "beginDate": null,
+      "endDate": null,
+      "isAcceptingChildren": true,
+      "isOpen": false
+    },
+    {
+      "id": 12,
+      "title": "dql297h",
+      "description": "hehe",
+      "parentNodeId": 10,
+      "childNodesId": [],
+      "membersId": [],
+      "tagsId": [],
+      "linksId": [],
+      "attachments": [],
+      "creationDate": "",
+      "orderIndex": 1,
+      "beginDate": null,
+      "endDate": null,
+      "isAcceptingChildren": true,
+      "isOpen": false
+    },
+    {
+      "id": 21,
+      "title": "dql962h",
+      "description": "hehe",
+      "parentNodeId": 20,
+      "childNodesId": [],
+      "membersId": [],
+      "tagsId": [],
+      "linksId": [],
+      "attachments": [],
+      "creationDate": "",
+      "orderIndex": 0,
+      "beginDate": null,
+      "endDate": null,
+      "isAcceptingChildren": true,
+      "isOpen": false
+    },
+    {
+      "id": 22,
+      "title": "d_6ql962h",
+      "description": "hehe",
+      "parentNodeId": 20,
+      "childNodesId": [],
+      "membersId": [],
+      "tagsId": [],
+      "linksId": [],
+      "attachments": [],
+      "creationDate": "",
+      "orderIndex": 1,
+      "beginDate": null,
+      "endDate": null,
+      "isAcceptingChildren": true,
+      "isOpen": false
+    },
+    {
+      "id": 31,
+      "title": "d927qlh",
+      "description": "hehe",
+      "parentNodeId": 30,
+      "childNodesId": [],
+      "membersId": [],
+      "tagsId": [],
+      "linksId": [],
+      "attachments": [],
+      "creationDate": "",
+      "orderIndex": 0,
+      "beginDate": null,
+      "endDate": null,
+      "isAcceptingChildren": true,
+      "isOpen": false
+    },
+    {
+      "id": 32,
+      "title": "wow",
+      "description": "hehe",
+      "parentNodeId": 30,
+      "childNodesId": [33, 34],
+      "membersId": [],
+      "tagsId": [],
+      "linksId": [],
+      "attachments": [],
+      "creationDate": "",
+      "orderIndex": 1,
+      "beginDate": null,
+      "endDate": null,
+      "isAcceptingChildren": false,
+      "isOpen": false
+    },
+    {
+      "id": 33,
+      "title": "je suis un child",
+      "description": "hehe",
+      "parentNodeId": 32,
+      "childNodesId": [],
+      "membersId": [],
+      "tagsId": [],
+      "linksId": [],
+      "attachments": [],
+      "creationDate": "",
+      "orderIndex": 1,
+      "beginDate": null,
+      "endDate": null,
+      "isAcceptingChildren": true,
+      "isOpen": false
+    },
+    {
+      "id": 34,
+      "title": "je suis un child",
+      "description": "hehe",
+      "parentNodeId": 32,
+      "childNodesId": [35],
+      "membersId": [],
+      "tagsId": [],
+      "linksId": [],
+      "attachments": [],
+      "creationDate": "",
+      "orderIndex": 1,
+      "beginDate": null,
+      "endDate": null,
+      "isAcceptingChildren": false,
+      "isOpen": false
+    },
+    {
+      "id": 35,
+      "title": "je suis un child",
+      "description": "hehe",
+      "parentNodeId": 34,
+      "childNodesId": [],
+      "membersId": [],
+      "tagsId": [],
+      "linksId": [],
+      "attachments": [],
+      "creationDate": "",
+      "orderIndex": 1,
+      "beginDate": null,
+      "endDate": null,
+      "isAcceptingChildren": true,
+      "isOpen": false
+    }
+  ],
+  "tags": [
+    {
+      "id": 11,
+      "name": "enhancement",
+      "color": "yellow"
+    },
+    {
+      "id": 12,
+      "name": "todo",
+      "color": "lightgreen"
+    },
+    {
+      "id": 13,
+      "name": "bug",
+      "color": "lightcoral"
+    },
+    {
+      "id": 14,
+      "name": "blocked",
+      "color": "lightcoral"
+    },
+    {
+      "id": 15,
+      "name": "looong-tag",
+      "color": "lightcoral"
+    },
+    {
+      "id": 16,
+      "name": "p1",
+      "color": "lightcoral"
+    }
+  ],
+  "members": [
+    {
+      "id": 1,
+      "name": "Hugo"
+    },
+    {
+      "id": 2,
+      "name": "Stéphane Dubedat"
+    },
+    {
+      "id": 3,
+      "name": "Nico Lidin"
+    }
+  ]
+}

@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component,  Vue } from 'vue-property-decorator';
 import TagList from "@/components/home/header/TagList.vue";
 import SearchBar from "@/components/home/header/SearchBar.vue";
 @Component({

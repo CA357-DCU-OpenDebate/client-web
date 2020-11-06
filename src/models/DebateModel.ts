@@ -1,4 +1,4 @@
-import {Expose, Transform} from "class-transformer";
+import {Expose, Transform, Type} from "class-transformer";
 
 export class Analyse {
   @Expose()
@@ -24,7 +24,11 @@ export default class DebateModel {
   @Expose() id!: number;
   @Expose() ownerId!: number;
   @Expose() title!: string;
-  @Expose() analyse!: Analyse;
+
+  @Type(() => Analyse)
+  @Expose()
+  analyse!: Analyse;
+
   @Expose() views!: number;
   @Expose() createdAt!: string;
   @Expose() updatedAt!: string;

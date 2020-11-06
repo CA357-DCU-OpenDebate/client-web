@@ -6,11 +6,19 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component,  Vue } from 'vue-property-decorator';
+import {getAxios} from "@/axiosInstance";
 
 @Component
 export default class DebateFeed extends Vue {
-
+  async fetchDebates() {
+    getAxios().get("debates").then((data) => {
+      console.log(data)
+    })
+  }
+  mounted() {
+    this.fetchDebates();
+  }
 }
 </script>
 
