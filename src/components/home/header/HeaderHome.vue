@@ -10,11 +10,11 @@
 import { Component,  Vue } from 'vue-property-decorator';
 import TagList from "@/components/home/header/TagList.vue";
 import SearchBar from "@/components/home/header/SearchBar.vue";
+
 @Component({
-  components: {SearchBar, TagList}
+  components: { SearchBar, TagList }
 })
-export default class HeaderHome extends Vue {
-}
+export default class HeaderHome extends Vue {}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

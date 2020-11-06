@@ -1,4 +1,5 @@
 import {Expose, Transform, Type} from "class-transformer";
+import "reflect-metadata";
 
 export class Analyse {
   @Expose()
