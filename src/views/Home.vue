@@ -1,18 +1,29 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <HeaderHome/>
+    <FeedCategoriesTabBar :categories="['Daily', 'Trends', 'Rising', 'Controversial']"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import HeaderHome from '@/components/HeaderHome.vue';
+import FeedCategoriesTabBar from "@/components/FeedCategoriesTabBar.vue";
 
 @Component({
   components: {
-    HelloWorld,
+    FeedCategoriesTabBar,
+    HeaderHome,
   },
 })
 export default class Home extends Vue {}
 </script>
+
+<style scoped lang="scss">
+  .home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+</style>
