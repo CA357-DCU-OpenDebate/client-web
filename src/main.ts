@@ -8,6 +8,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
+import { Promised } from "vue-promised";
+Vue.component("Promised", Promised);
 Vue.config.productionTip = false;
 
 new Vue({

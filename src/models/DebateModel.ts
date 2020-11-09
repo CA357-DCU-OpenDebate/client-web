@@ -7,7 +7,7 @@ export class Analyse {
   @Transform(value => (typeof value === "string" ? JSON.parse(value) : null), {
     toClassOnly: true,
   })
-  description: Array<any> | string | null = null;
+  argumentation: Array<any> | string | null = null;
 
   @Expose()
   @Transform((value: Array<any>) => JSON.stringify(value), { toPlainOnly: true })
@@ -25,6 +25,7 @@ export default class DebateModel {
   @Expose() id!: number;
   @Expose() ownerId!: number;
   @Expose() title!: string;
+  @Expose() description!: string;
 
   @Type(() => Analyse)
   @Expose()

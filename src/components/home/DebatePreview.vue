@@ -1,5 +1,5 @@
 <template>
-  <div class="debate-preview">
+  <div class="debate-preview" @click="redirectToDebateView()">
     {{debate.title}}
   </div>
 </template>
@@ -11,7 +11,11 @@ import DebateModel from "@/models/DebateModel";
 @Component
 export default class DebatePreview extends Vue {
   @Prop() debate!: DebateModel;
-  
+
+  redirectToDebateView() {
+    this.$router.push({name: "Debate", params: { id: this.debate.id.toString() }})
+  }
+
 }
 </script>
 

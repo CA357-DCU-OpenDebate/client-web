@@ -2,8 +2,9 @@
   {
     "id": "10",
     "title": "TEST CHICHA",
+    "description": "yow fratos c la description",
     "analyse": {
-      "description": "[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"heheh\"}]}]",
+      "argumentation": "[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"yow fratos\"}]}]",
       "conclusion": "[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"heheh\"}]}]"
     }
   },
@@ -11,7 +12,7 @@
     "id": "20",
     "title": "Testdqldd",
     "analyse": {
-      "description": "[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"heheh\"}]}]",
+      "argumentation": "[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"heheh\"}]}]",
       "conclusion": "[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"heheh\"}]}]"
     }
   },
@@ -19,7 +20,7 @@
     "id": "30",
     "title": "qhqlhdld",
     "analyse": {
-      "description": "[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"heheh\"}]}]",
+      "argumentation": "[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"heheh\"}]}]",
       "conclusion": "[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"heheh\"}]}]"
     }
   }
