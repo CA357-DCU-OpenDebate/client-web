@@ -81,15 +81,15 @@ export default class Debate extends Vue {
         //this.setTitle(this.getTitleFromContent(content));
       },
       extensions: [
-        new Placeholder({
-          showOnlyCurrent: false,
-          emptyNodeText: node => {
-            if (node.type.name === "title") {
-              return "Give me a name";
-            }
-            return "Write the description !";
-          },
-        }),
+        //new Placeholder({
+        //  showOnlyCurrent: false,
+        //  emptyNodeText: node => {
+        //    if (node.type.name === "title") {
+        //      return "Give me a name";
+        //    }
+        //    return "Write the description !";
+        //  },
+        //}),
         new Blockquote(),
         new CodeBlock(),
         new HardBreak(),
@@ -109,7 +109,7 @@ export default class Debate extends Vue {
       ],
       //TODO transform description en string et la parse?
       content: {
-        type: "block+",
+        type: "doc",
         content:  this.debateModel.analyse.argumentation
       },
     });
@@ -117,20 +117,21 @@ export default class Debate extends Vue {
   setEditorConclusion() {
     this.editorConclusion = new Editor({
       onUpdate: ({ getHTML, getJSON }) => {
-        //const editor: any = this.editor.getJSON();
+        const editor: any = this.editorConclusion.getJSON();
+        console.log(editor)
         //const content: Array<any> = editor["content"];
         //this.setTitle(this.getTitleFromContent(content));
       },
       extensions: [
-        new Placeholder({
-          showOnlyCurrent: false,
-          emptyNodeText: node => {
-            if (node.type.name === "title") {
-              return "Give me a name";
-            }
-            return "Write the description !";
-          },
-        }),
+       // new Placeholder({
+       //   showOnlyCurrent: false,
+       //   emptyNodeText: node => {
+       //     if (node.type.name === "title") {
+       //       return "Give me a name";
+       //     }
+       //     return "Write the description !";
+       //   },
+       // }),
         new Blockquote(),
         new CodeBlock(),
         new HardBreak(),
@@ -148,11 +149,10 @@ export default class Debate extends Vue {
         new Underline(),
         new History(),
       ],
-      //TODO transform description en string et la parse?
       content: {
-        type: "block+",
+        type: "doc",
         content: this.debateModel.analyse.conclusion
-      },
+      }
     });
   }
   created() {
@@ -211,7 +211,6 @@ h1 > br:nth-child(2):last-child {
 .editor {
   position: relative;
   overflow-y: auto;
-  height: 600px;
 }
 .editor p {
   margin-bottom: 0px;
