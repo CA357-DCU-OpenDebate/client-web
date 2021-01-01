@@ -27,12 +27,14 @@ h3 {
 ul {
   list-style-type: none;
   padding: 0;
+  border-bottom: 3px solid black;
 }
 li {
   display: inline-block;
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: black;
+  font-size: 36px;
 }
 </style>

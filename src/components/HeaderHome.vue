@@ -21,5 +21,9 @@ export default class HeaderHome extends Vue {
 <style scoped lang="scss">
 h1 {
   text-align: center;
+  color: #5E5E5E;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-size: 60px;
 }
 </style>
