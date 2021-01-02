@@ -1,18 +1,37 @@
 <template>
   <div class="debate">
-    <h1>yow debate !</h1>
     <Promised :promise="fetchDebateModelById">
       <template v-slot:default>
         <div v-if="debateModel">
-          <h1 >{{debateModel.title}}</h1>
-          <h1>description</h1>
-          {{debateModel.description}}
-          <h1>analyse</h1>
-          <h2>argumentation</h2>
-          <editor-content class="editor" :editor="editorArgumentation" :autoFocus="false" :readonly="true"></editor-content>
-          <h2>conclusion</h2>
-          <editor-content class="editor" :editor="editorConclusion" :autoFocus="false" :readonly="true"></editor-content>
-        </div>
+          <div class="title ">
+            <h1>{{debateModel.title}}</h1>
+          </div>
+          <div class="payload">
+            <div class="view-container">
+              <router-link :to="{}" :replace="true">Article</router-link>
+              <router-link :to="{}"> History</router-link>
+              <router-link :to="{}"> LatestProposal </router-link>
+            </div>
+            <div class="description content">
+              <h1 class="header">description</h1>
+              <b-button class="change-proposal" variant="open-debate-green">Change proposal</b-button>
+              {{debateModel.description}}
+              <b-button class="view-content-button">View description</b-button>
+            </div>
+            <div class="analyse content">
+              <h1 class="header">analyse</h1>
+              <div class="view-container">
+                <router-link :to="{}">Simple View</router-link>
+                <router-link :to="{}">Advenced View</router-link>
+              </div>
+              <b-button class="change-proposal"  variant="open-debate-green">Change proposal</b-button>
+              <h2 class="sub-category">argumentation</h2>
+              <editor-content class="editor" :editor="editorArgumentation" :autoFocus="false" :readonly="true"></editor-content>
+              <h2 class="sub-category">conclusion</h2>
+              <editor-content class="editor" :editor="editorConclusion" :autoFocus="false" :readonly="true"></editor-content>
+            </div>
+          </div>
+          </div>
       </template>
       <template v-slot:pending>
         load
@@ -56,16 +75,20 @@ import Doc from "@/editorExtension/Doc";
   }
 })
 export default class Debate extends Vue {
+  toto = "qhdqlh"
   debateModel!: DebateModel;
   editorArgumentation!: Editor;
   editorConclusion!: Editor;
 
+  test(id: string) {
+    console.log(id)
+  }
   get fetchDebateModelById(): Promise<DebateModel>{
     const id = this.$route.params.id;
-    console.log("id " + id)
+
     return getAxios(false)
         .get("debates/" + id)
-        .then((debate: any) => {
+        .then((debate: DebateModel) => {
           console.log("yoww cool")
           this.debateModel = plainToClass(DebateModel, debate.data as Object)
           console.log(this.debateModel)
@@ -162,14 +185,56 @@ export default class Debate extends Vue {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="scss">
+.title {
+  border-bottom: 1px solid;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.content > .header {
+  position: absolute;
+  top: -32px;
+  margin-bottom: 0;
+}
+.content > .change-proposal {
+  color: white;
+  position: absolute;
+  top: -25px;
+  border-radius: 5px;
+  margin-bottom: 0;
+  right: 10px;
+}
+.content > .view-content-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px; /* Need a specific value to work */
+
+
+}
+.content {
+  position: relative;
+  border: 1px solid ;
+  border-radius: 6px;
+  padding: 5px;
+  margin-bottom: 40px;
+}
+
+</style>
 <style lang="scss" scoped>
 .debate {
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* width: 90%; */
+}
+.debate .payload {
   padding-left: 25%;
   padding-right: 25%;
+  display: flex;
+  flex-direction: column;
 }
 .debate > .menubar {
   padding-top: 20px;
@@ -270,5 +335,85 @@ h1 > br:nth-child(2):last-child {
     font-size: 0.85em;
     color: #6a737d;
   }
+}
+$trait-width: 53px;
+.view-container {
+  display: inline-flex;
+  border: 1px solid gray;
+  margin: auto;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.view-container > a {
+  all: unset;
+  border-right: 1px solid gray;
+  padding: 4px;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+.view-container > a:last-child {
+  border-right: none;
+  padding-right: 7px;
+}
+.view-container > a:first-child {
+  padding-left: 7px;
+}
+.view-container > a:first-child,
+.view-container > a:last-child {
+  position: relative;
+}
+.view-container > a:hover,
+.view-container > a.router-link-active {
+  cursor: pointer;
+  background-color: var(--dark-hover);
+}
+.view-container::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: $trait-width;
+  background-color: gray;
+  height: 1px;
+  left: calc(#{$trait-width} * -1);
+  top: calc(50% - 1px);
+}
+.view-container::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: $trait-width;
+  background-color: gray;
+  height: 1px;
+  right: calc(#{$trait-width} * -1);
+  top: calc(50% - 1px);
+}
+
+.analyse.content {
+  display: flex;
+  flex-direction: column;
+}
+.content .sub-category {
+  position: relative;
+}
+.content  .sub-category::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: $trait-width;
+  background-color: gray;
+  height: 1px;
+  left: calc(#{$trait-width} * -1);
+  top: calc(50% - 1px);
+}
+.content  .sub-category::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: $trait-width;
+  background-color: gray;
+  height: 1px;
+  right: calc(#{$trait-width} * -1);
+  top: calc(50% - 1px);
 }
 </style>

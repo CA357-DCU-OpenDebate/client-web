@@ -12,6 +12,8 @@ import { Promised } from "vue-promised";
 Vue.component("Promised", Promised);
 Vue.config.productionTip = false;
 
+import "@/assets/style/global.scss";
+
 new Vue({
   router,
   store,
