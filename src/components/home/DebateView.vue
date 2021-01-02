@@ -3,38 +3,47 @@
     <Promised :promise="fetchDebateModelById">
       <template v-slot:default>
         <div v-if="debateModel">
-          <div class="title ">
+          <div class="title">
             <h1>{{debateModel.title}}</h1>
+            <b-button class="change-proposal-button" variant="open-debate-green">
+              Change proposal
+              <img src="../../assets/pen.svg" alt="" width="20" height="20">
+            </b-button>
           </div>
           <div class="payload">
             <div class="view-container">
-              <router-link :to="{}" :replace="true">Article</router-link>
+              <router-link class="article-button" :to="{}" :replace="true">Article</router-link>
               <router-link :to="{}"> History</router-link>
               <router-link :to="{}"> LatestProposal </router-link>
             </div>
             <div class="description content">
-              <h1 class="header">description</h1>
-              <b-button class="change-proposal" variant="open-debate-green">Change proposal</b-button>
+              <h1 class="header">Description</h1>
+              <b-button class="change-proposal-button" variant="open-debate-green">
+                Change proposal
+                <img src="../../assets/pen.svg" alt="" width="20" height="20">
+              </b-button>
               {{debateModel.description}}
-              <b-button class="view-content-button">View description</b-button>
             </div>
             <div class="analyse content">
-              <h1 class="header">analyse</h1>
+              <h1 class="header">Analyse</h1>
               <div class="view-container">
                 <router-link :to="{}">Simple View</router-link>
-                <router-link :to="{}">Advenced View</router-link>
+                <router-link class="advenced-button" :to="{}">Advenced View</router-link>
               </div>
-              <b-button class="change-proposal"  variant="open-debate-green">Change proposal</b-button>
-              <h2 class="sub-category">argumentation</h2>
+              <b-button class="change-proposal-button"  variant="open-debate-green">
+                Change proposal
+                <img src="../../assets/pen.svg" alt="" width="20" height="20">
+              </b-button>
+              <h2 class="sub-category">Argumentation</h2>
               <editor-content class="editor" :editor="editorArgumentation" :autoFocus="false" :readonly="true"></editor-content>
-              <h2 class="sub-category">conclusion</h2>
+              <h2 class="sub-category">Conclusion</h2>
               <editor-content class="editor" :editor="editorConclusion" :autoFocus="false" :readonly="true"></editor-content>
             </div>
           </div>
           </div>
       </template>
       <template v-slot:pending>
-        load
+        Load
       </template>
     </Promised>
   </div>
@@ -186,37 +195,52 @@ export default class Debate extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
+.advenced-button {
+  background-color: #E5E5E5 !important;
+}
+.article-button {
+  background-color: #E5E5E5 !important;
+}
 .title {
   border-bottom: 1px solid;
   text-align: center;
-  margin-bottom: 50px;
+  position: relative;
+}
+.title .change-proposal-button {
+  position: absolute;
+  top: 30px
 }
 .content > .header {
   position: absolute;
+  margin-left: 20px;
   top: -32px;
   margin-bottom: 0;
 }
-.content > .change-proposal {
+ .change-proposal-button {
+  color: white !important;
+  height: 32px;
+  padding: .25em !important;
   color: white;
   position: absolute;
   top: -25px;
-  border-radius: 5px;
+  border-radius: 20px !important;
   margin-bottom: 0;
   right: 10px;
 }
 .content > .view-content-button {
+  border: 1px solid;
   position: absolute;
+  bottom: -14px;
+  border-radius: 18px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 100px; /* Need a specific value to work */
-
-
 }
 .content {
+  background-color: white;
   position: relative;
-  border: 1px solid ;
+  border: 1px solid #E5E5E5;
   border-radius: 6px;
   padding: 5px;
   margin-bottom: 40px;
@@ -231,8 +255,10 @@ export default class Debate extends Vue {
   /* width: 90%; */
 }
 .debate .payload {
-  padding-left: 25%;
-  padding-right: 25%;
+  padding-top: 30px;
+  background-color: #F5F5F5;
+  padding-left: 20%;
+  padding-right: 20%;
   display: flex;
   flex-direction: column;
 }
@@ -342,7 +368,6 @@ $trait-width: 53px;
   border: 1px solid gray;
   margin: auto;
   border-radius: 7px;
-  margin-bottom: 20px;
   position: relative;
 }
 .view-container > a {
@@ -389,12 +414,16 @@ $trait-width: 53px;
   top: calc(50% - 1px);
 }
 
-.analyse.content {
+.content {
+  padding-left: 5%;
+  padding-right: 5%;
   display: flex;
   flex-direction: column;
 }
 .content .sub-category {
   position: relative;
+  margin-left: 60px;
+  inline-size: fit-content;
 }
 .content  .sub-category::before {
   content: "";
@@ -415,5 +444,14 @@ $trait-width: 53px;
   height: 1px;
   right: calc(#{$trait-width} * -1);
   top: calc(50% - 1px);
+}
+.change-proposal-button {
+}
+.payload > .view-container {
+  margin-bottom: 40px;
+}
+.analyse > .view-container {
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 </style>
