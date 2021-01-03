@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
-import DebateFeed from "@/components/DebateFeed.vue";
+import DebateFeed from "@/components/home/DebateFeed.vue";
+import Debate from "@/components/home/DebateView.vue";
 
 Vue.use(VueRouter)
 
@@ -18,6 +19,11 @@ const routes: Array<RouteConfig> = [
       }
     ]
   },
+  {
+    path: '/debate/:id',
+    name: 'Debate',
+    component: Debate
+  }
 ]
 
 const router = new VueRouter({

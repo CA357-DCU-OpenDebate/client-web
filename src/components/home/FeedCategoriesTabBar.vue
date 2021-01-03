@@ -16,6 +16,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class FeedCategoriesTabBar extends Vue {
   @Prop() categories!: Array<string>;
+  chichon = "dhqdl"
 }
 </script>
 
