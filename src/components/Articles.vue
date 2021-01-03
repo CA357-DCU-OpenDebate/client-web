@@ -3,12 +3,12 @@
     <ul>
       <li v-for="cat in categories" :key= "cat"> {{cat}}</li>
     </ul>
-    <h4>Should we stop eating meat?</h4>
-    <p class="p1">The ethics of eating meat has been long debated by </p>
-    <p class="p2">philosophers activists and religous leaders. Today in </p>
-    <p class="p3">the West at least vegetarianism and veganism is on <p>
-    <p class="p4">the rise as more people</p>
-    <button alt="Click to see more of the article" type="button">...</button>
+    <h4>Is the earth round?</h4>
+    <p class="p1">While the Earth appears to be round when viewed </p>
+    <p class="p2">from the vantage point of space, it is actually closer</p>
+    <p class="p3"> to an ellipsoid. However, even an ellipsoid does <p>
+    <p class="p4">not adequately describe</p>
+    <b-button pill variant="outline-secondary" class="button_dots" href="/debate/10" alt="Click to see more of the article">...</b-button>
     <img class="clock" src="https://nsa40.casimages.com/img/2021/01/01/mini_210101081236172263.png
       " alt="Clock representing time already past">
     <p class="revision">Last revision at 7:06PM</p>
@@ -41,8 +41,8 @@ h1 {
 h4 {
 color: #444444;
 font-weight: bold;
-text-align: center;
-margin-left: -40px;
+text-align: left;
+margin-left: 10px;
 }
 ul {
   margin-top: 10px;
@@ -77,19 +77,19 @@ p {
 .p4 {
   opacity: 0.25;
 }
-button {
-  border-radius: 15px;
+.button_dots {
+  width: 38px;
+  height: 35px;
+  margin-left: 200px;
+  margin-top: -20px;
   display: flex;
-  margin-top: -25px;
-  margin-left: 190px;
-  padding: 0px 15px;
-  background: none; 
-  border: 0.5px solid black;
+  background-color: #64B7AD;
+  color: white;
 }
 .clock {
   height: 30px;
   width: 30px;
-  margin-top: 15px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 .revision {

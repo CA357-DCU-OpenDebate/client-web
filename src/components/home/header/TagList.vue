@@ -35,7 +35,7 @@ export default class TagList extends Vue {
   a {
     display: flex;
     justify-content: center;
-    color: black;
+    color: #0056b3;;
     text-decoration: underline;
   }
 </style>
