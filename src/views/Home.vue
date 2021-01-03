@@ -2,6 +2,17 @@
   <div class="home">
     <HeaderHome/>
     <FeedCategoriesTabBar :categories="['Daily', 'Trends', 'Rising', 'Controversial']"/>
+    <br><br><br><br><br><br>
+    <div class="articles">
+      <Articles/>
+      <Articles/>
+      <Articles/>
+    </div>
+    <div class="articles">
+      <Articles/>
+      <Articles/>
+      <Articles/>
+    </div>
     <router-view></router-view>
   </div>
 </template>
@@ -10,11 +21,13 @@
 import { Component, Vue } from 'vue-property-decorator';
 import HeaderHome from '@/components/HeaderHome.vue';
 import FeedCategoriesTabBar from "@/components/FeedCategoriesTabBar.vue";
+import Articles from '@/components/Articles.vue';
 
 @Component({
   components: {
     FeedCategoriesTabBar,
     HeaderHome,
+    Articles,
   },
 })
 export default class Home extends Vue {}
@@ -25,5 +38,11 @@ export default class Home extends Vue {}
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+
+  .articles {
+    display: flex;
+    align: row;
+    justify-content: center;
   }
 </style>
